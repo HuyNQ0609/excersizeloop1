@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess Game</title>
+</head>
+<body>
+  <input type="button" value="Start" onclick="guess()">
+  <script>
+      function guess() {
+        debugger;
+        let guess = parseInt(prompt("Enter the number you want to guess in the largest range:"));
+        let number = Math.floor(Math.random() * guess);
+        console.log(number);
+        let check = parseInt(prompt("Enter a number you want to guess:"));
+        let i = 0;
+        while (check !== number) {
+          i++;
+          if (i === 4) {
+            alert("You have run out of guesses");
+            break;
+          } else if (check < number) {
+                   alert("The number you guess is smaller");
+          }      else {
+                      alert("The number you guess is bigger");
+          }
+          check = parseInt(prompt("Enter a number you want to guess:"));
+        }
+        if (i === 4) {
+          document.write("You have run out of guesses");
+        } else {
+          document.write("You guessed the correct number. Congratulation!");
+        }
+      }
+  </script>
+</body>
+</html>

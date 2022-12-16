@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiply 7</title>
+</head>
+<body>
+  <script>
+    let count = 30;
+    let i = 0;
+    let m = 0;
+    let total = 0;
+      while (i < count) {
+          if (m % 7 === 0) {
+              i++;
+              total += m;
+          }
+          m++;
+      }
+      document.write(total);
+  </script>
+</body>
+</html>
